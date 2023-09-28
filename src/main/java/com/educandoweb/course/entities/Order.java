@@ -50,9 +50,6 @@ public class Order implements Serializable {
 		this.client = client;
 	}
 	
-	public Set<OrderItem> getItems(){
-		return items;
-	}
 
 	public Long getId() {
 		return id;
@@ -86,6 +83,10 @@ public class Order implements Serializable {
 		if(orderStatus != null) {
 			this.orderStatus = orderStatus.getCode();
 		}
+	}
+	
+	public Set<OrderItem> getItems(){
+		return items;
 	}
 
 	@Override
